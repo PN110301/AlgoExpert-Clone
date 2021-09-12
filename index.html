@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="top-part">
+        <nav class="navbar navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABuCAMAAADmp0YAAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQFBgcH+Pn6+/z9/vBVGEbAAABi1JREFUaN6tWleC4yAMtQGbYtr9T7vJ2BSBQHhm+dnZJCDUngratu8S2sXvCpcS+/bHtR/yCj/HOSPyp9zEagUr/0LitL4+zT535i62y/DfURAmtEd59v2CdZ//3OB4LybhsKN+qOiIL3u+5MIODjIVIyGE33Pz4aLZXI4LbJP3X9dXC/xQ8DrXom74BW+nxXejeD6VmwVG8OHsBHTUgkXvOgDjLFtuKna7vweCASYdSJmdtc1qwLu4P9yS2MBiKvSmji9WScrr5py9JuL7zXqNmTNMRevnRDamaWb2ig3DkB9QRD4SLWbpUTM7PGXuNZEwEIasZNGzURQX1IDTmkjktFpdIw5eTN2ykf88ine9CQ80GwSQZRaVH+PP8fiJfZxyxUYVJqohG1ncNv87WeVA81gZy+4azpkXJQ6SU06hyTXRIf/fzsHtvp3Y9jDVfOsPgdc4Yth025Hh5GZJUwBV3P/IGE5FHJ1VoSbuWOu/D6xkHPD5/o8tk2DLmsh3MWrHLa0oildqOm4AKhcdaG5puervsBAApygzwhRT+/5CQC8ScwsB8wCI5Wh/vG/j32g9Bfbk0XHBVVr7ChQvIgC5Pv5oCBq+yXmIS5nmV3rhbpmGdQBiiN+bNqlQKzQ+GHmVrG2CqsVJgI4mrGRINDWSTXh5VHD1EWzICg8Q6y1JpWdk292UlcxHuthOUXks0e+IL2tSH2kR2lcRC7iPPLAt+dqmvlfSi5uI1+Px4kJoGDzDs3G45fGReA4glg+DomkVlr6wI2fvgfoxMD/KiZFM9arMGizXmxZk5cDRHc2Gk/ZPdA8mRxaRuCLDDHSz2Z1IHMGxTfcemdLEoTt4BCz1zB0eJKhEyQMVPBAqSbn7NLr6LkGdBE3RhsrkVYrIFBS0nrrQYqe5PquqqUTjLmqsdah7BoxXVcVX6BMiFWsd8DA032aDrXPGosADNARE4963idlIJ1g+A1u6UslLRJNDnhDCf9BCriQzRzKWZDalvmpjfLGoRMXvPC6lV4+yrelMs2/0uEaX8boGMIeXFLG7UjrInVzaVi1HfJUt5cNaY5d1Q+BokVG/yJWa39dsW2D+V4tz9lWanC2sQQYHLIq3RPaya6l5lQXGe1jfgepCH4+aQpxKYpufO0CX/ZWIm4hLgZQgYFa5JK66OdTnz6x2TIu2i/S6sFpDedDWy6qrKbEajK5BKitpwTR/kVvYRZwndEaKRoKVq1Oj6GBFthE0wcq1VOdFlkCvwlPdN5VhMHQsFWPTLsJehM16YzERa/XnTYH3Efx90MoJEuzVgaDlSGgRAOFk7FLzXd6HeMXaiz3nMtLCLniqxUIQ+y6ks3dBQ3NEw8G22c2sL3zEwSY5h1/RVe7jqi2nf6IFsUHkwtJUompLLT2AiiqO2wLPpeANjimVxGmQSLqLBkiDylJOqrZc56nVqo0PDjPDqi3XeaMiiA/yYITHUdU2rvOSs3R1nhw3cXAqmQbWwjN4jucmsdMhEpvSyL0CVFdEswCJhIP6SI/LvLgTLSLXmsMos05mjCCjoptdS3zgDZyL6ixBKma5FWU7v9ZLjbvCh+NvmmpL7cEUsCzd7KpY0Q1q6XeNTs9WGp3ZluRaxg9bthSN5PYS7RKv5WQkjXSsA9C48PxetdFpGsnB+bLau8xrZY6iVrVbTJN3kHddq3fylbeTZUXzsL8gMV76mnqtquAen+OgKx29rT6c5eQxHGJZMfkp6PGxeQ+BqXz9oy5hiIcKkUxKLJQU5THzhvbi/G7uwUndC8+yJc9Oj5dV9SZpf5QLD8x5dCdUcxwS7Sjgia8ln8qlHzyVh64nNcqU3fqjf/skXj1uDt8cOZj2GPxKFTYU+w3KBHIQ4yh39ag8y3RBdGJSKIyJ8GpWa6Tc3RJvwXMiu6rqckkXQQPU8JMxH64qpLJsLcZ8x3x2NJhuSNbK64rdk2/CoFECZw2e0YKmI/eR02nrQSqzEAJ30Ea4iss+EcjmavRrHVzo/zNEpo6fmbRco+5xOA7njvWZyMPOxuHGg31ie7XO0WCfxjrXz5TT+8nOAyVzJ+U9lfDfhy3hRNt3PvXc/rCAcQIcEPrmxl/q+PMA7FYGYPWt139Q6uryekUiBAAAAABJRU5ErkJggg=="
+                        alt="" width="40" height="30" class="d-inline-block align-text-top">
+                    <span class="img-text"> AlgoExpert</span>
+                    <p class="img-para">Ace the technical interviews</p>
+                </a>
+                <nav class="nav-links">
+                    <ul>
+                        <li>Products</li>
+                        <li>Contents</li>
+                        <li>Team</li>
+                        <li>Purchase</li>
+                    </ul>
+                </nav>
+                <button class="login">Login</button>
+            </div>
+
+        </nav>
+
+        <div class="center-part">
+
+            <div class="part-1">
+
+                <h2 class="h2-title">AlgoExpert</h2>
+                <p class="center-part-para">The ultimate resource to prepare for coding interviews.<br> Everything you
+                    need, in one streamlined platform.</p>
+                <a>
+                    <button class="center-btn"><i class="fa fa-credit-card"> Buy AlgoExpert</i></button>
+                </a>
+                <img class="part-2-image"
+                    src="https://media.istockphoto.com/vectors/isometric-developing-programming-and-coding-technologies-young-a-vector-id956073060?k=20&m=956073060&s=612x612&w=0&h=_4YsSbp9oXguypU3zgVDZSCHmpKdmF-4GkajJZPvFFo=">
+
+
+            </div>
+
+        </div>
+
+        <div class="second-part">
+            <h2 class="second-title" align="center">What is AlgoExpert?</h2>
+            <br>
+            <button class="video"><i class="fa fa-play-circle"> Watch the Video</i></button><br>
+            <div class="cards ">
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/vectors/quiz-exam-assessment-knowledge-check-question-mark-laptop-objective-vector-id1257079525?k=20&m=1257079525&s=612x612&w=0&h=1ONNU7gK7FEwtsLnLZyUTHz7zVS3uzWnMlLCZ5XKuiU="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">160 Hand-Picked Questions</h5><br>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro beatae
+                                quis voluptatibus perspiciatis iusto voluptas distinctio magnam! Eius rem, vero natus
+                                repellendus officiis, debitis, excepturi sequi doloribus voluptatem animi labore!</p><a
+                                href="#">Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/vectors/video-tutorials-icon-concept-video-conference-and-webinar-icon-and-vector-id1015429734?k=20&m=1015429734&s=612x612&w=0&h=TFMmDFJ7HSVNdTlQwVYgMKEjaX2xdeBbrei0QOoy0_w="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">100+ Hours of Video Explaination</h5><br>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                                veritatis laboriosam dolore iure tempore vitae architecto magnam esse facere et
+                                inventore debitis, voluptate quod similique!</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/photos/big-data-analytics-visualization-technology-with-scientist-analyzing-picture-id1205428317?k=20&m=1205428317&s=612x612&w=0&h=zTM-qtGG9Y3R3I9HCO7LcooiCbeIBolyOA65j1EZxko="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Structures Crash Course</h5><br>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa ducimus
+                                aspernatur mollitia ipsum delectus laudantium distinctio temporibus cupiditate ut ad et
+                                laboriosam exercitationem eius libero architecto accusamus, vitae</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/code-optimization-coding-icon-gray-vector-vector-id1257267254?k=20&m=1257267254&s=612x612&w=0&h=qnzfqv-4_sdqO0VKpqkCtDU5lBd4eqBJs0uXXHMXtnc="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Solutions in 9 Languages</h5><br>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                                    nobis, nulla tenetur tempore cupiditate a odio voluptates dolorem laboriosam aut,
+                                    doloribus quibusdam vitae quam. Animi ex laborum pariatur.</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/software-coding-development-icon-gray-vector-graphics-vector-id1339318035?k=20&m=1339318035&s=612x612&w=0&h=NbdWeZAsCv__Ur-t3uetOFTahJ5Tpv-q2HKy0fvD6fc="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Code-Execution Environment</h5><br>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsam
+                                    voluptatibus, fuga excepturi alias mollitia recusandae facere. Eum iure, odio minima
+                                    praesentium nisi ea dolor. Quam voluptates asperiores tempora perferendis iure.</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/abstract-atom-molecule-model-vector-id697671790?k=20&m=697671790&s=612x612&w=0&h=tAbhJIVSgDmsIqs_-R4N4TefuG49yRm1dImUh6Z7B_A="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Space-Time Complexity Analysis</h5><br>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sint
+                                    cupiditate exercitationem aliquid, quo ea dicta in animi saepe architecto..</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/concept-people-fill-out-a-form-application-form-for-employment-people-vector-id1056400820?k=20&m=1056400820&s=612x612&w=0&h=ARS_lNlSHz8Xu_oGqMFOsYT-szfn7tLvMQe9o4TRDgE="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">4 Curated Assessment</h5><br>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                                    accusamus sit cum, quis quod totam, vitae ad beatae assumenda cupiditate repudiandae
+                                    saepe excepturi doloribus natus culpa pariatur aliquam doloremque dolore!</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/certificate-icon-flat-vector-id1007014282?k=20&m=1007014282&s=612x612&w=0&h=yRKbIGryuEulbvD8uhVCUHXCC9mrr-Ha2Nu3hEHda0w="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Certificate Of Completion</h5><br>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Perspiciatis, nihil explicabo veniam hic, iure dicta assumenda voluptatem dolore
+                                    dolores totam quasi iusto, iste voluptatibus ex.</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/vectors/girl-with-laptop-happy-woman-business-woman-creative-people-working-vector-id1221183429?k=20&m=1221183429&s=612x612&w=0&h=Scr_DhHgrwXc8pheOcxUKi-SNoYe0k6k10EcopzQV-k="
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mock Coding Interviews</h5><br>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                                    ipsam aliquid ex officiis eos, asperiores ullam aperiam accusantium a tenetur fuga
+                                    sapiente accusamus consequatur facere, numquam ad placeat fugiat voluptatibus aut
+                                    soluta et. Nemo, voluptatem!.</p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="third-part">
+                <h2 class="third-title">A Better Way To Prep For Coding Interviews</h2>
+
+
+
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://media.istockphoto.com/photos/abstract-computer-code-snippet-defining-the-new-year-2021-picture-id1295336992?k=20&m=1295336992&s=612x612&w=0&h=KilU3zzyUSLaqQFAHW6WYZstIq-USXDi6yFPJtfF0Rw="
+                                class="d-block w-100" alt="...">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/photos/programming-source-code-abstract-background-picture-id1047259374?k=20&m=1047259374&s=612x612&w=0&h=pt3XbBvrmiYgoYmVzsaUeXtV8vw_jJI9Ly8P7AL6Qig="
+                                class="d-block w-100" alt="...">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/photos/program-code-javascript-php-html-css-of-site-web-development-source-picture-id1202250586?k=20&m=1202250586&s=612x612&w=0&h=bWJ7TqcuGZTTCg521Xz3pBkvKonkwp-QqnBduX00dJA="
+                                class="d-block w-100" alt="...">
+
+
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                    <div class="third-part-btn">
+                        <button class="third-btn-1">Study With AlgoExpert</button>
+                        <button class="third-btn-2">Study With Other Resources</button>
+                    </div>
+                </div>
+
+                <div class="companies">
+                    <div class="companies-inner">
+                        <h2 class="companies-title">With Great Outcomes</h2>
+                        <p class="companies-para">Our customers have gotten offers from awesome companies</p>
+                        <div class="company">
+                            <marquee class="line-1" scrollamount="10">
+                                <img src="https://cdn.pixabay.com/photo/2015/09/14/04/19/google-939112__340.png">
+                                <img src="https://cdn.pixabay.com/photo/2015/07/13/07/41/icons-842893__340.png">
+                                <img src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg">
+                                <img src="https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658__340.png">
+                                <img
+                                    src="https://media.gettyimages.com/photos/the-amazon-logo-is-projected-onto-a-screen-at-a-press-conference-on-picture-id151368933?k=20&m=151368933&s=612x612&w=0&h=L5TYTtys4v6Q0qwuLWe1_0LVkAQVZiQAql-2QbUC-VI=">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/01/12/09/twitter-logo-1788039__340.jpg">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720934__340.png">
+                                <img src="https://cdn.pixabay.com/photo/2017/08/22/11/55/linked-in-2668687__340.png">
+                            </marquee>
+                            <marquee class="line-2" scrollamount="10" direction="right">
+                                <img src="https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684__340.png">
+                                <img src="https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064__340.png">
+                                <img src="https://cdn.pixabay.com/photo/2017/01/11/08/31/icon-1971130__340.png">
+                                <img
+                                    src="https://tse2.mm.bing.net/th?id=OIP.-k2qZptAaSKdn4b-Lo0_QQHaCu&pid=Api&P=0&w=415&h=153">
+                                <img
+                                    src="https://tse3.mm.bing.net/th?id=OIP.iAD2_N_-24O47HcvjXAfjAHaCl&pid=Api&P=0&w=448&h=157">
+                                <img
+                                    src="https://tse3.mm.bing.net/th?id=OIP.ikKWEKkXh6ZxuFeJnVxkuQHaD-&pid=Api&P=0&w=284&h=153">
+                                <img
+                                    src="https://tse2.mm.bing.net/th?id=OIP.VnZjjHkzGfAZn9YmxULcHQHaHa&pid=Api&P=0&w=300&h=300">
+                                <img
+                                    src="https://tse1.mm.bing.net/th?id=OIP.y0TaXmRV3V5TZput1PdgnwHaB4&pid=Api&P=0&w=495&h=126">
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fourth-part">
+                    <div class="fourth-part-content">
+                        <br>
+                        <h1 class="fourth-title">160 Questions Spanning 15 Categories.</h1><br>
+                        <p class="fourth-para">If you want to ace the coding interviews, being well-versed in all common
+                            data structures and <br>popular problem-solving methods is paramount. With 160 questions
+                            spanning 15 categories and 4 difficulty levels,<br> we've got you covered.</p>
+                        <button class="fourth-btn">Explore Questions</button>
+                    </div>
+                    <div class="topics">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Arrays</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Graphs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Linked List</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Trees</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Binary Trees</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Strings</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Sorting</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Recursion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Searching</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Stack</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Queue</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <i class="fa fa-check"></i>
+                                        <p class="topics-title">Heap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fifth-part">
+                    <div class="fifth-part-1">
+                        <h1 class="fifth-title">Our Videos Set Us Apart</h1>
+                        <p class="fifth-part-para">The truth is that interview questions and algorithms are difficult.
+                            Even more difficult is trying to understand the inner workings of a complex algorithm from a
+                            book or from a poorly thought-out video shot on your grandma's camera. Our crisp 1080p
+                            videos boast crystal-clear audio and are strategically divided into two parts to give you
+                            the most comprehensive explanations to questions. That's over 100 hours of content
+                            specifically tailored to make interview questions and algorithms easy.</p>
+                        <div class="fifth-part-1-1">
+                            <div class="conceptual">
+                                <img class="conceptual-img"
+                                    src="https://cdn.pixabay.com/photo/2017/09/25/11/38/lithium-2784853__340.png">
+                                <h3 class="conceptual-title">Conceptual Overview</h3>
+                                <p class="conceptual-para">Our videos all start with an in-depth conceptual overview of
+                                    the algorithm at hand: how to approach it, how to implement it, how to optimize it,
+                                    and how to analyze its space-time complexity.<br><a href="#">See More Example</a>
+                                </p>
+
+                            </div>
+                            <div class="code">
+                                <img class="code-img"
+                                    src="https://media.istockphoto.com/photos/computer-keyboard-with-clipping-path-picture-id153065264?b=1&k=6&m=153065264&s=170667a&w=0&h=Kfi2pVp6PxODmXnXmhmEacbBpH_h7E8dupYy2mjZNaM=">
+                                <h3 class="code-title">Code Walkthrough</h3>
+                                <p class="code-para">Our videos all start with an in-depth conceptual overview of the
+                                    algorithm at hand: how to approach it, how to implement it, how to optimize it, and
+                                    how to analyze its space-time complexity.<br><a href="#">See More Example</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fifth-part-2">
+                        <iframe width="500" height="300" src="https://www.youtube.com/embed/Pw6lrYANjz4"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="sixth-part">
+                    <div class="sixth-part-img">
+                        <img
+                            src="https://tse4.mm.bing.net/th?id=OIP.8J8ewW2xA_DO2xonG7hAwgHaCe&pid=Api&P=0&w=459&h=154">
+                    </div>
+                    <div class="sixth-part-content">
+                        <h2 class="sixth-title">Data Structures Crash Course</h2><br>
+                        <p class="sixth-para">Algorithms and data structures go hand in hand; the solution to virtually
+                            any coding interview problem will require the implementation of some kind of abstract data
+                            type in order to access and manipulate information.<br><br>
+                            Our video series on data structures is the ultimate crash course on this important topic. We
+                            cover fundamental concepts pertaining to memory, complexity analysis, and Big O notation,
+                            and then break down popular data structures to give you a detailed look at how these
+                            concepts are applied under the hood. Linked Lists and Binary Trees will never instill fear
+                            in your heart again.</p>
+                        <br>
+                        <button class="sixth-btn">Start The Course</button>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="seventh-part">
+                    <div class="lang">
+                        <h2 class="seventh-title">We Speak 9 Languages</h2><br>
+                        <p class="seventh-para">There's nothing more frustrating than opening an interview prep book,
+                            only to find a bunch of solutions in a programming language that you don't know. That's why
+                            all of our questions come with complete written solutions in 9 popular languages.</p><br>
+                        <div class="languages-1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.u_Qa4LpkYnXQlmiIP4kMnwHaEo&pid=Api&P=0&w=268&h=168" class="rounded float-start" alt="...">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.mWVI2HQOIu77YmsDfk873QHaHa&pid=Api&P=0&w=300&h=300" class="rounded mx-auto d-block" alt="...">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.wpCkQ7PyQHMiUqgT1KbPZQHaHa&pid=Api&P=0&w=300&h=300" class="rounded float-end" alt="...">
+                           
+                        </div>
+                        <div class="languages-2">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.6-G_o5PZSzppyfdLTbFu-AHaGq&pid=Api&P=0&w=166&h=151" class="rounded float-start" alt="...">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.k9m4PrqrakK3MblRLSmDhwHaHo&pid=Api&P=0&w=300&h=300" class="rounded mx-auto d-block" alt="...">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.XtcjAxlQHJTFxv4SAx95PQHaFG&pid=Api&P=0&w=233&h=161" class="rounded float-end" alt="...">
+                           
+                        </div>
+                        <div class="languages-3">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.V9ACnAqslzyMAy3OEZDXlQHaFj&pid=Api&P=0&w=200&h=151" class="rounded float-start" alt="...">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.xHIGU4x8JGxfHXo3_93l2gHaHa&pid=Api&P=0&w=300&h=300" class="rounded mx-auto d-block" alt="...">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.W0SHKBV6bR0IIovzNDSWpwHaCy&pid=Api&P=0&w=492&h=186" class="rounded float-end" alt="...">
+                           
+                        </div>
+                        
+
+                    </div>
+                    <div class="seventh-img">
+                        <img
+                            src="https://tse3.mm.bing.net/th?id=OIP.tIGmHxDTQ2uYJY6GoQynFgHaEH&pid=Api&P=0&w=291&h=162">
+                    </div>
+                    
+                </div>
+                    <button class="seventh-btn">Here there! do you want your coding interviews ?</button><br>
+                    <button class="seventh-btn-1">Ofcourse</button>
+                    <button class="seventh-btn-2">Nope</button>
+
+            </div>
+            <hr>
+            <footer class="footer">
+                <br>
+<p class="footer-content">               
+Contact Us  |
+FAQ  |
+Reviews  |
+Blog  |
+Jobs  |
+SWE Project Contests  |
+Legal Stuff  |
+Privacy Policy
+</p>
+<p>Copyright &copy 2017-2021 AlgoExpert LLC. All rights reserved.</p>
+            </footer>
+        </div>
+
+       
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
